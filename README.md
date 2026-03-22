@@ -1,23 +1,14 @@
 # Arca-WDK: Secure Agentic Treasury
 
-This project implements the **Financial Audit Stream** for "El Arca de Alan" using the **Tether Wallet Development Kit (WDK)**.
+This project implements the Financial Audit Stream for "El Arca de Alan" using the **Tether Wallet Development Kit (WDK)**.
 
-## Overview
-This agent is part of a multi-stream ecosystem (PDT Architecture) designed to provide autonomous but audited financial agency.
+## Tether WDK
+The integration leverages the Tether WDK for real-time tracking of USDC/USDT deposits on Polygon. This allows the agent to monitor its treasury in a non-custodial manner.
 
-### Core Features
-- **Inflow Monitoring:** Uses Tether WDK to watch for USDT/USDC deposits.
-- **Automated Invoicing:** Generates structured Markdown receipts for every transaction.
-- **Security Guardrail:** Strictly **Read-Only**. The agent code contains no private keys and is physically incapable of initiating outflows.
+## ERC-4337 Policies
+To ensure maximum security, the agent follows strict on-chain and off-chain policies. The treasury is strictly read-only, and unauthorized signature attempts are blocked at the SDK level.
 
-## Built for Tether Hackathon Galactica
-This repository demonstrates how to integrate Tether's WDK with an "Agentic Firewall" philosophy.
-
-## How to Run
-```bash
-npm install
-npx ts-node index.ts
-```
-
-## License
-Apache 2.0
+## Core Features
+- **Automated Invoicing**: Generates PDF/JSON proofs of received funds.
+- - **Audit Logs**: Transparent trail of all treasury interactions.
+  - 
